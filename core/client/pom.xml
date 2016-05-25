@@ -922,6 +922,10 @@
                   <pattern>alluxio.worker.DataServerMessage</pattern>
                   <shadedPattern>shaded.alluxio.worker.DataServerMessage</shadedPattern>
                 </relocation>
+                <relocation>
+                  <pattern>alluxio.org.jets3t</pattern>
+                  <shadedPattern>shaded.org.jets3t</shadedPattern>
+                </relocation>
               </relocations>
             </configuration>
           </execution>
