@@ -251,6 +251,9 @@
                 <includes>
                   <include>org.alluxio:alluxio-core-common</include>
                   <include>org.alluxio:alluxio-core-client-internal</include>
+                  <include>org.alluxio:alluxio-underfs-local</include>
+                  <include>org.alluxio:alluxio-underfs-hdfs</include>
+                  <include>org.alluxio:alluxio-underfs-s3</include>
                   <include>org.apache.thrift:libthrift</include>
                 </includes>
               </artifactSet>
@@ -750,6 +753,42 @@
                 <relocation>
                   <pattern>alluxio.underfs.UnderFileSystemRegistry</pattern>
                   <shadedPattern>shaded.alluxio.underfs.UnderFileSystemRegistry</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>alluxio.underfs.local.LocalUnderFileSystem</pattern>
+                  <shadedPattern>shaded.alluxio.underfs.local.LocalUnderFileSystem</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>alluxio.underfs.local.LocalUnderFileSystem</pattern>
+                  <shadedPattern>shaded.alluxio.underfs.local.LocalUnderFileSystemFactory</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>alluxio.underfs.hdfs.HdfsUnderFileSystem</pattern>
+                  <shadedPattern>shaded.alluxio.underfs.hdfs.HdfsUnderFileSystem</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>alluxio.underfs.hdfs.HdfsUnderFileSystemFactory</pattern>
+                  <shadedPattern>shaded.alluxio.underfs.hdfs.HdfsUnderFileSystemFactory</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>alluxio.underfs.hdfs.HdfsUnderFileSystemUtils</pattern>
+                  <shadedPattern>shaded.alluxio.underfs.hdfs.HdfsUnderFileSystemUtils</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>alluxio.underfs.s3.S3InputStream</pattern>
+                  <shadedPattern>shaded.alluxio.underfs.s3.S3InputStream</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>alluxio.underfs.s3.S3OutputStream</pattern>
+                  <shadedPattern>shaded.alluxio.underfs.s3.S3OutputStream</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>alluxio.underfs.s3.S3UnderFileSystem</pattern>
+                  <shadedPattern>shaded.alluxio.underfs.s3.S3UnderFileSystem</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>alluxio.underfs.s3.S3UnderFileSystemFactory</pattern>
+                  <shadedPattern>shaded.alluxio.underfs.s3.S3UnderFileSystemFactory</shadedPattern>
                 </relocation>
                 <relocation>
                   <pattern>alluxio.util.CommonUtils</pattern>
